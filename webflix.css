@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: antiquewhite;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(3988284.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: aqua;
+    padding: 7px 20px;
+    font-size: 12px;
+    font-style: italic;
+    border-radius: 8%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.languagebtn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    color: #fff;
+}
+.languagebtn img{
+    margin-left: 10px;
+    width: 10px;
+}
+.headerkont{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.headerkont h1{
+    font-size: 68px;
+    line-height: 72px;
+    font-weight: 600;
+    max-width: 650px;
+    margin-left: 10%;
+    animation: h1anime 5s infinite alternate-reverse;
+}
+@keyframes h1anime{
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+.headerkont h3{
+    font-weight: 400px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 40px;
+}
+.headerkont p{
+    margin-bottom: 18px;
+}
+/*............features start here............*/
+.features{
+     padding: 50px 12%;
+     font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+@keyframes pop
+{
+    50%
+    {
+        transform: scale(1.1);
+    }
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border-radius: 4%;
+   box-shadow: 3px 3px 2px 4px #777;
+}  
+.img-col img:hover{
+    animation: pop 0.3s linear 1 ;
+
+} 
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/*faqs------------*/
+.faqs{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faqs h2{
+    font-weight: 500;
+    font-size: 40px;
+}
+.accords{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accords li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accords li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    /*content: '+';*/
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    /*transition: transform 0.5s;*/
+}
+
+input[type="radio"]{
+    display: none;
+}
+.accords .content{
+    background: #303030;
+    text-align: left;
+    padding:0 20px;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s ease-in-out;
+}
+.accords input[type="radio"]:checked + label + .content{
+    max-height: 700px;
+    padding: 30px 20px;  
+}
+
+.accords input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
+
+
+
+
+
+/*footer.......................*/
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid aquamarine;
+    color:#777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+     margin-bottom: 30px;
+     margin-left: 28%;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: rgb(41, 66, 66);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .languagebtn{
+    padding: 10px 20px;
+    border-radius: 5%;
+}
+.copyright{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/*media queries*/
+@media only screen and (max-width : 600px){
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    nav .languagebtn{
+        padding: 4px 8px;
+    }
+    .headerkont{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .headerkont h1{
+        font-size: 30px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+    .features h2{
+        font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 10px 0;
+    }
+    .faqs h2{
+        font-size: 20px;
+    }
+    .accords .content{
+        font-size: 14px;
+    }
+    .accords li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+}
